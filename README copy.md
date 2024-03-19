@@ -2,7 +2,7 @@
 
 Welcome to the CloudNativeHacks hackathon.
 
-For general event information, please visit the [FAQ](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/cloudnativehacks-faq)
+For general event information, please visit the [FAQ](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/cloudnativehacks-faq) 
 
 ## Tasks
 
