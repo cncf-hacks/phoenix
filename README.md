@@ -75,7 +75,8 @@ Analyzes the provided text and returns insights on potential threats.
 
 ```json
 {
-  "analyzType": "string"
+  "analyzType": "string",
+  "contents:": "string[]"
 }
 ```
 
@@ -89,3 +90,5 @@ Analyzes the provided text and returns insights on potential threats.
   }
 ]
 ```
+
+![alt text](https://github.com/cncf-hacks/phoenix/blob/main/images/cncf.png?raw=true)

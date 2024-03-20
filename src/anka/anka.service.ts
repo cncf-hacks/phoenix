@@ -24,6 +24,10 @@ export class AnkaService {
   async analyzCustomContent(payload: AnalyzPayload) {
     console.log('Analyzing online content...');
 
+    if (payload.contents.length === 0) {
+      return 'No content to analyze';
+    }
+
     return this.analyzContent(payload.contents);
   }
 
@@ -37,11 +41,12 @@ export class AnkaService {
 
     for (const content of contents) {
       const insights = await service.analyzeContent(content);
-      console.log(`Content: ${content}\nInsights: ${insights}\n`);
+      console.log(`Content: ${content}`);
+      console.log(`Response: ${JSON.stringify(insights, null, 2)}`);
 
       response.push({
         content,
-        insights,
+        response: insights.choices[0].message.content,
       });
     }
 

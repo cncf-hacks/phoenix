@@ -21,7 +21,7 @@ export class AnkaController {
     } else if (payload.analyzType === 'online') {
       return this.ankaService.analyzOnlineContent(payload);
     } else if (payload.analyzType === 'custom') {
-      return this.ankaService.analyzOnlineContent(payload);
+      return this.ankaService.analyzCustomContent(payload);
     } else {
       return 'Invalid analyz type';
     }
