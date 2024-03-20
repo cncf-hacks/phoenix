@@ -63,4 +63,29 @@ Use the provided REST API endpoints to submit content for analysis. Example requ
 curl -X POST http://localhost:3000/analyze -H "Content-Type: application/json" -d '{"analyzType": "<analyz type>"}'
 ```
 
-Replace "<Analyz Type>" with the content you wish to analyze.
+Replace `<analyz type>` with the content you wish to analyze.
+
+### API Reference
+
+#### POST `/analyze`
+
+Analyzes the provided text and returns insights on potential threats.
+
+- **Request Body:**
+
+```json
+{
+  "analyzType": "string"
+}
+```
+
+- **Response:**
+
+```json
+[
+  {
+    "content": "string",
+    "response": "string"
+  }
+]
+```
