@@ -20,7 +20,7 @@ In the digital age, the spread of information through various channels can signi
 ### Prerequisites
 
 - Node.js (version 14 or higher recommended)
-- An OpenAI API key
+- An OpenAI API key and endpoint
 
 ### Installation
 
@@ -42,7 +42,7 @@ cd phoenix
 npm install
 ```
 
-4. Create a `.env` file in the root directory and add your OpenAI API key:
+4. Create a `.env` file in the root directory and add your OpenAI API key and endpoint:
 
 ```sh
 OPENAI_API_KEY=your_api_key_here

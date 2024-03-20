@@ -8,31 +8,26 @@ export class AnkaService {
   async analyzOfflineContent(payload: AnalyzPayload) {
     console.log('Analyzing offline content...');
 
-    var response = [];
-
-    const service = new OpenAIService(
-      process.env.OPENAI_API_ENDPOINT,
-      process.env.OPENAI_API_KEY,
-    );
-
     const offlineContents = ContentFetcher.getOfflineContents();
 
-    for (const content of offlineContents) {
-      const insights = await service.analyzeContent(content);
-      console.log(`Content: ${content}\Response: ${insights}\n`);
-
-      response.push({
-        content,
-        response: insights.choices[0].message.content,
-      });
-    }
-
-    return response;
+    return this.analyzContent(offlineContents);
   }
 
   async analyzOnlineContent(payload: AnalyzPayload) {
     console.log('Analyzing online content...');
 
+    const onlineContents = ContentFetcher.getOnlineContents();
+
+    return this.analyzContent(onlineContents);
+  }
+
+  async analyzCustomContent(payload: AnalyzPayload) {
+    console.log('Analyzing online content...');
+
+    return this.analyzContent(payload.contents);
+  }
+
+  async analyzContent(contents: string[]) {
     var response = [];
 
     const service = new OpenAIService(
@@ -40,9 +35,7 @@ export class AnkaService {
       process.env.OPENAI_API_KEY,
     );
 
-    const onlineContents = ContentFetcher.getOnlineContents();
-
-    for (const content of onlineContents) {
+    for (const content of contents) {
       const insights = await service.analyzeContent(content);
       console.log(`Content: ${content}\nInsights: ${insights}\n`);
 
