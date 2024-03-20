@@ -1,3 +1,8 @@
+--> ismail
+Phoenix is an AI-powered, API-based open source framework that enables applications to scan online and offline content to combat information pollution, hate speech, and gender-based violence.
+It provides API 
+
+
 # AI-Powered Solutions for Safeguarding Democracy Threats
 
 ## Overview
