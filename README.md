@@ -1,9 +1,6 @@
---> ismail
+# Project Phoenix
+
 Phoenix is an AI-powered, API-based open source framework that enables applications to scan online and offline content to combat information pollution, hate speech, and gender-based violence.
-It provides API 
-
-
-# AI-Powered Solutions for Safeguarding Democracy Threats
 
 ## Overview
 
@@ -26,6 +23,25 @@ In the digital age, the spread of information through various channels can signi
 ### Installation
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/cncf-hacks/phoenix.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd phoenix
+   ```
+
+3. Install NPM Packages
+
+   ```sh
+   npm install
+   ```
+
+4. Create a `.env`
+
+   ```sh
+
    ```
