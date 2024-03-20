@@ -2,6 +2,8 @@
 
 Phoenix is an AI-powered, API-based open source framework that enables applications to scan online and offline content to combat information pollution, hate speech, and gender-based violence.
 
+![alt text](https://github.com/cncf-hacks/phoenix/blob/main/images/phoenix.jpg?raw=true)
+
 ## Overview
 
 In the digital age, the spread of information through various channels can significantly impact democratic processes. Information pollution, including hate speech, misinformation, and gender-based violence, can sway public opinion, influence voters, and create distrust in democratic institutions. This project leverages AI and digital technologies to scan online and offline content, aiming to combat these threats by identifying harmful content and providing actionable insights to safeguard democratic processes.
@@ -24,24 +26,41 @@ In the digital age, the spread of information through various channels can signi
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/cncf-hacks/phoenix.git
-   ```
+```sh
+git clone https://github.com/cncf-hacks/phoenix.git
+```
 
 2. Navigate to the project directory:
 
-   ```sh
-   cd phoenix
-   ```
+```sh
+cd phoenix
+```
 
-3. Install NPM Packages
+3. Install NPM Packages:
 
-   ```sh
-   npm install
-   ```
+```sh
+npm install
+```
 
-4. Create a `.env`
+4. Create a `.env` file in the root directory and add your OpenAI API key:
 
-   ```sh
+```sh
+OPENAI_API_KEY=your_api_key_here
+OPENAI_API_ENDPOINT=your_api_endpoint_here
+```
 
-   ```
+### Usage
+
+To start the server, run:
+
+```sh
+npm start
+```
+
+Use the provided REST API endpoints to submit content for analysis. Example request:
+
+```sh
+curl -X POST http://localhost:3000/analyze -H "Content-Type: application/json" -d '{"analyzType": "<analyz type>"}'
+```
+
+Replace "<Analyz Type>" with the content you wish to analyze.
